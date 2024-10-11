@@ -26,8 +26,15 @@ ENV APP_FOLDER=/var/www/html/misige
 COPY misige_files ${APP_FOLDER}
 
 #Start Services
-## Unfurtunately I had to use a hack to start services in Dockerfile and keep the container alive
+# Unfurtunately I had to use a hack to start services in Dockerfile and keep the container alive
+
+
+##Apache
+RUN echo -n "ServerName localhost" >>  /etc/apache2/apache2.conf
+RUN echo -n "sh /etc/apache2/envvars\n" >> ~/.bashrc
 RUN echo -n "service apache2 start\n" >> ~/.bashrc
+
+##Maria DB
 RUN echo -n "service mariadb start\n" >> ~/.bashrc
 
 EXPOSE 80
