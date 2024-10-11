@@ -10,7 +10,7 @@ A criação da imagens pelo processo atual é lento devido a necessidade de baix
 ### **1. Gerar container**
 #### ***Windows:*** pelo script [reload_image.bat](./reload_image.bat)
 - **cmd**: `reload_missige.bat`
-#### ***Linux:*** [reload_image.sh](./reload_image.sh)
+#### ***Linux:*** pelo script [reload_image.sh](./reload_image.sh)
 - **bash**: `sh ./reload_missige.sh`
 
 ### **2. Abrir o browser e acessar:**
